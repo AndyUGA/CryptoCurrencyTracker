@@ -1,0 +1,45 @@
+
+p {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 200px;
+    
+}
+
+#bitcoinPrice {
+    color: orange;
+}
+
+#neoPrice {
+   color: greenyellow;
+}
+
+#vertcoinPrice {
+    color: darkgreen;
+}
+
+#civicPrice {
+    color: limegreen;
+}
+
+#golemPrice {
+    color: gray;
+}
+
+#litecoinPrice {
+    color: silver;
+}
+
+#vertcoinPic {
+    position: relative;
+    bottom: 1px;
+    right: 300px;
+    
+}
+
+.cyrptoIdentifier {
+    font-size: 50px;
+    color: red;
+}
