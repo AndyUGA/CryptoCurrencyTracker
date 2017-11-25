@@ -10,119 +10,8 @@
     <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
-    
-    
-    <!--
-    <nav class = "navbar navbar-default"> 
-        <div class = "container-fluid">
-            <div class = "navbar-header">
-                <a class = "navbar-brand"> Cryptocurrency Tracker</a>
-            </div>
-            
-            <!-- Menu Items --> 
-    <!--
-            <div>
-                <ul class = "nav navbar-nav"> 
-                    <li class = "active"> <a href = "https://www.google.com"> Home </a> </li>
-                    <li> <a href = "#"> About </a> </li>
-                    <li> <a href = "#"> Contact </a> </li>
-                </ul>
-            </div>
-        
-        </div>
-    
-    
-    </nav>
-    --> 
-    <script>
-        var xmlhttp = new XMLHttpRequest();
-        
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("bitcoinPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("bitcoinTotalAmount").innerHTML = price * 0;
-            
-    }
-};
-xmlhttp.open("GET", "https://api.coinmarketcap.com/v1/ticker/bitcoin/", true);
-xmlhttp.send();
-   </script>
-    
-    
-     <script>
-        var xmlhttp2 = new XMLHttpRequest();
-        xmlhttp2.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("neoPrice").innerHTML = myArr[0].price_usd; 
-            document.getElementById("neoTotalAmount").innerHTML = price * 5.8;
-    }
-};
-xmlhttp2.open("GET", "https://api.coinmarketcap.com/v1/ticker/neo/", true);
-xmlhttp2.send();
 
-   </script>
-     <script>
-        var xmlhttp3 = new XMLHttpRequest();
-        
-        xmlhttp3.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("litecoinPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("litecoinTotalAmount").innerHTML = price * 1;
-    }
-};
-xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/litecoin/", true);
-xmlhttp3.send();
-
-   </script>
     
-    
-    <script>
-        var xmlhttp3 = new XMLHttpRequest();
-        
-        xmlhttp3.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("vertcoinPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("vertcoinTotalAmount").innerHTML = price * 7.5;
-    }
-};
-xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/vertcoin/", true);
-xmlhttp3.send();
-
-   </script>
-    
-    <script>
-        var xmlhttp3 = new XMLHttpRequest();
-        
-        xmlhttp3.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("civicPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("civicTotalAmount").innerHTML = price * 27;
-    }
-};
-xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/civic/", true);
-xmlhttp3.send();
-
-   </script>
-    
-    <script>
-        var xmlhttp3 = new XMLHttpRequest();
-        
-        xmlhttp3.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("golemPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("golemTotalAmount").innerHTML = price * 20;
-    }
-};
-xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/golem-network-tokens/", true);
-xmlhttp3.send();
-
-   </script>
     
     
     
@@ -159,6 +48,7 @@ xmlhttp3.send();
                 </td>
 
             </tr>
+            
             <tr>
                 <td class = "neo"> Neo </td>
                 <td>
@@ -171,6 +61,7 @@ xmlhttp3.send();
                     <p class = "neoTotalAmount" id = "neoTotalAmount"> </p>
                 </td>
             </tr>
+        
              <tr>
                 <td class = "litecoin"> Litecoin </td>
                 <td>
@@ -183,18 +74,20 @@ xmlhttp3.send();
                     <p class = "litecoin" id = "litecoinTotalAmount"> </p>
                  </td>
             </tr>
+            
              <tr>
                 <td class = "vertcoin"> Vertcoin </td>
                 <td>     
                    <p class = "vertcoin" id="vertcoinPrice"> </p>
                 </td> 
                  <td class = "vertcoin">
-                    7.5
+                    20
                  </td>
                  <td>
                     <p class = "vertcoin" id = "vertcoinTotalAmount"> </p>
                  </td>
             </tr>
+            
             <tr>
                 <td class = "civic"> Civic </td>
                 <td> 
@@ -207,6 +100,7 @@ xmlhttp3.send();
                     <p class = "civic" id = "civicTotalAmount"> </p>
                 </td>
             </tr>
+            
             <tr>
                 <td class = "golem" > Golem </td>
                 <td> 
@@ -222,10 +116,111 @@ xmlhttp3.send();
         </tbody>    
     </table>
 
+        
     
        </div>
-
+    <script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        var totalAmount = 0;
+        var xmlhttp = new XMLHttpRequest();
+        
+        xmlhttp.onreadystatechange = function() 
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+            var myArr = JSON.parse(this.responseText);
+            var price = document.getElementById("bitcoinPrice").innerHTML = myArr[0].price_usd;
+            document.getElementById("bitcoinTotalAmount").innerHTML = price * 0;
+            }
+        };
+        xmlhttp.open("GET", "https://api.coinmarketcap.com/v1/ticker/bitcoin/", true);
+        xmlhttp.send();
    
+        var xmlhttp2 = new XMLHttpRequest();
+        xmlhttp2.onreadystatechange = function() 
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+            var myArr = JSON.parse(this.responseText);
+            var price = document.getElementById("neoPrice").innerHTML = myArr[0].price_usd; 
+            document.getElementById("neoTotalAmount").innerHTML = price * 5.8;
+            document.getElementById("foo3").innerHTML = price;
+            
+            }
+        };
+                
+        
+
+        
+        
+        xmlhttp2.open("GET", "https://api.coinmarketcap.com/v1/ticker/neo/", true);
+        xmlhttp2.send();
+        
+        var xmlhttp3 = new XMLHttpRequest();
+        xmlhttp3.onreadystatechange = function() 
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+            var myArr = JSON.parse(this.responseText);
+            var price = document.getElementById("litecoinPrice").innerHTML = myArr[0].price_usd;
+            document.getElementById("litecoinTotalAmount").innerHTML = price * 1;
+            }
+        };
+        xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/litecoin/", true);
+        xmlhttp3.send();
+
+        var xmlhttp3 = new XMLHttpRequest();
+        xmlhttp3.onreadystatechange = function() 
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+            var myArr = JSON.parse(this.responseText);
+            var price = document.getElementById("vertcoinPrice").innerHTML = myArr[0].price_usd;
+            document.getElementById("vertcoinTotalAmount").innerHTML = price * 20;
+            }
+        };
+        xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/vertcoin/", true);
+        xmlhttp3.send();
+
+
+        var xmlhttp3 = new XMLHttpRequest();
+        xmlhttp3.onreadystatechange = function() 
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+            var myArr = JSON.parse(this.responseText);
+            var price = document.getElementById("civicPrice").innerHTML = myArr[0].price_usd;
+            document.getElementById("civicTotalAmount").innerHTML = price * 27;
+            }
+        };
+        xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/civic/", true);
+        xmlhttp3.send();
+
+        var xmlhttp3 = new XMLHttpRequest();
+        xmlhttp3.onreadystatechange = function() 
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+            var myArr = JSON.parse(this.responseText);
+            var price = document.getElementById("golemPrice").innerHTML = myArr[0].price_usd;
+            document.getElementById("golemTotalAmount").innerHTML = price * 20;
+            }
+        };
+        xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/golem-network-tokens/", true);
+        xmlhttp3.send();
+
+        document.getElementById("foo").innerHTML = totalAmount;
+
+   </script>
+    
 
 </body>
 </html> 
