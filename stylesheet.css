@@ -1,42 +1,36 @@
 
-p {
-    font-size: 50px;
-}
-
-h3 {
-    font-size: 200px;
-    
-}
 
 
-.coin {
+
+.all {
     font-size: 50px;
 }
 
 
-#bitcoinPrice, #bitcoinName {
+.bitcoin {
     color: orange;
 }
 
 
-#neoName, #neoColor{
+.neo {
     color: greenyellow;
-} 
-
-#litecoinPrice, #litecoinName {
-    color: silver;
 }
 
-#vertcoinName, #vertcoinColor {
+
+.litecoin {
+    color: gray;
+}
+
+.vertcoin {
     color: darkgreen;
 }
 
 
-#civicPrice, #civicName {
+.civic {
     color: limegreen;
 }
 
-#golemPrice, #golemName {
+.golem {
     color: gray;
 }
 
@@ -48,4 +42,5 @@ h3 {
     right: 300px;
     
 }
+
 
