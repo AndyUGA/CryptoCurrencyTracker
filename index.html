@@ -41,7 +41,7 @@
                     <p class = "bitcoin" id = "bitcoinPrice">  </p> 
                 </td>
                 <td class = "bitcoin"> 
-                    0     
+                    0.001     
                 </td>
                 <td>
                     <p class = "bitcoin" id = "bitcoinTotalAmount"> </p>
@@ -115,20 +115,12 @@
             </tr>
         </tbody>    
     </table>
-
-        
-    
        </div>
+    
+    
+    
+    
     <script>
-        
-        
-        
-        
-        
-        
-        
-        
-        
         var totalAmount = 0;
         var xmlhttp = new XMLHttpRequest();
         
@@ -138,7 +130,7 @@
             {
             var myArr = JSON.parse(this.responseText);
             var price = document.getElementById("bitcoinPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("bitcoinTotalAmount").innerHTML = price * 0;
+            document.getElementById("bitcoinTotalAmount").innerHTML = (price * 0.001).toFixed(2);
             }
         };
         xmlhttp.open("GET", "https://api.coinmarketcap.com/v1/ticker/bitcoin/", true);
@@ -151,8 +143,9 @@
             {
             var myArr = JSON.parse(this.responseText);
             var price = document.getElementById("neoPrice").innerHTML = myArr[0].price_usd; 
-            document.getElementById("neoTotalAmount").innerHTML = price * 5.8;
-            document.getElementById("foo3").innerHTML = price;
+            var totalPrice = document.getElementById("neoTotalAmount").innerHTML = (price * 5.8).toFixed(2);
+            totalAmount = totalAmount + totalPrice;
+            document.getElementById("price1").innerHTML = totalAmount;
             
             }
         };
@@ -171,7 +164,10 @@
             {
             var myArr = JSON.parse(this.responseText);
             var price = document.getElementById("litecoinPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("litecoinTotalAmount").innerHTML = price * 1;
+            var totalPrice = document.getElementById("litecoinTotalAmount").innerHTML = (price * 1).toFixed(2);
+            totalAmount = totalAmount + totalPrice;
+            document.getElementById("price2").inner = totalAmount;
+            
             }
         };
         xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/litecoin/", true);
@@ -184,7 +180,8 @@
             {
             var myArr = JSON.parse(this.responseText);
             var price = document.getElementById("vertcoinPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("vertcoinTotalAmount").innerHTML = price * 20;
+            var totalPrice = document.getElementById("vertcoinTotalAmount").innerHTML = (price * 20).toFixed(2);
+            totalAmount = totalAmount + totalPrice;
             }
         };
         xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/vertcoin/", true);
@@ -198,7 +195,8 @@
             {
             var myArr = JSON.parse(this.responseText);
             var price = document.getElementById("civicPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("civicTotalAmount").innerHTML = price * 27;
+            var totalPrice = document.getElementById("civicTotalAmount").innerHTML = (price * 27).toFixed(2);
+            totalAmount = totalAmount + totalPrice;
             }
         };
         xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/civic/", true);
@@ -211,13 +209,16 @@
             {
             var myArr = JSON.parse(this.responseText);
             var price = document.getElementById("golemPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("golemTotalAmount").innerHTML = price * 20;
+            var totalPrice = document.getElementById("golemTotalAmount").innerHTML = (price * 20).toFixed(2);
+            totalAmount = totalAmount + totalPrice;
+        
+            document.getElementById("totalAmount").innerHTML = totalPrice + totalAmount;
             }
         };
         xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/golem-network-tokens/", true);
         xmlhttp3.send();
 
-        document.getElementById("foo").innerHTML = totalAmount;
+    
 
    </script>
     
