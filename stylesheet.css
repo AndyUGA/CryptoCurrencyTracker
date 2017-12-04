@@ -34,13 +34,22 @@
     color: gray;
 }
 
-
-
-#vertcoinPic {
-    position: relative;
-    bottom: 1px;
-    right: 300px;
-    
+.AP {
+    color: orange;
 }
+
+#APsize {
+    font-size: 25px;
+}
+
+.SP {
+    color: lawngreen;
+}
+
+#SPsize {
+    font-size: 25px;
+}
+
+
 
 
