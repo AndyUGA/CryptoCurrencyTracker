@@ -41,7 +41,7 @@
                     <p class = "bitcoin" id = "bitcoinPrice">  </p> 
                 </td>
                 <td class = "bitcoin"> 
-                    0.001     
+                    0.0016     
                 </td>
                 <td>
                     <p class = "bitcoin" id = "bitcoinTotalAmount"> </p>
@@ -187,6 +187,30 @@
                         <p id = "cardanoPrice"> </p>
                     </td>
                 </tr>
+                
+                <tr> 
+                    <td>
+                        <p class = "SP"> Substratum </p>
+                    </td>
+                    <td>
+                        0.13
+                    </td>
+                    <td>
+                        <p id = "substratumPrice"> </p>
+                    </td>
+                </tr>
+                
+                <tr> 
+                    <td>
+                        <p class = "SP"> Request </p>
+                    </td>
+                    <td>
+                        0.24
+                    </td>
+                    <td>
+                        <p id = "requestPrice"> </p>
+                    </td>
+                </tr>
             </tbody>
         </table>
         
@@ -213,7 +237,7 @@
             {
             var myArr = JSON.parse(this.responseText);
             var price = document.getElementById("bitcoinPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("bitcoinTotalAmount").innerHTML = (price * 0.001).toFixed(2);   
+            var totalAmount = document.getElementById("bitcoinTotalAmount").innerHTML = (price * 0.0016).toFixed(2);   
             }
         };
         xmlhttp.open("GET", "https://api.coinmarketcap.com/v1/ticker/bitcoin/", true);
@@ -298,7 +322,7 @@
             {
             var myArr = JSON.parse(this.responseText);
             var price = document.getElementById("arkPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("arkCurrentPrice").innerHTML = (price * 1).toFixed(2);
+            document.getElementById("arkCurrentPrice").innerHTML = (price * 2).toFixed(2);
            
             }
         };
@@ -326,7 +350,7 @@
             {
             var myArr = JSON.parse(this.responseText);
             var price = document.getElementById("grsPrice").innerHTML = myArr[0].price_usd;
-           
+            document.getElementById("grsCurrentPrice").innerHTML = (price * 1).toFixed(2);
             }
         }
         xmlhttp9.open("GET", "https://api.coinmarketcap.com/v1/ticker/groestlcoin/", true);
@@ -371,6 +395,32 @@
         }
         xmlhttp12.open("GET", "https://api.coinmarketcap.com/v1/ticker/cardano/", true);
         xmlhttp12.send();
+        
+        var xmlhttp13 = new XMLHttpRequest();
+        xmlhttp13.onreadystatechange = function()
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+            var myArr = JSON.parse(this.responseText);
+            var price = document.getElementById("substratumPrice").innerHTML = myArr[0].price_usd;
+           
+            }
+        }
+        xmlhttp13.open("GET", "https://api.coinmarketcap.com/v1/ticker/substratum/", true);
+        xmlhttp13.send();
+        
+        var xmlhttp14 = new XMLHttpRequest();
+        xmlhttp14.onreadystatechange = function()
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+            var myArr = JSON.parse(this.responseText);
+            var price = document.getElementById("requestPrice").innerHTML = myArr[0].price_usd;
+           
+            }
+        }
+        xmlhttp14.open("GET", "https://api.coinmarketcap.com/v1/ticker/request-network/", true);
+        xmlhttp14.send();
         
         
         
