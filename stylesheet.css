@@ -26,13 +26,37 @@
 }
 
 
-.civic {
-    color: limegreen;
+.carnado {
+    color: deepskyblue;
 }
 
 .golem {
     color: gray;
 }
+
+.ark {
+    color: red;
+}
+
+.wabi {
+    color: forestgreen;
+}
+
+.substratum {
+    color: indianred;
+}
+
+.stellarLumens {
+    color: lightblue;
+}
+
+.requestNetwork {
+    color: cyan;
+}
+
+
+
+
 
 .AP {
     color: orange;
