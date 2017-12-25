@@ -133,7 +133,7 @@
                     <p class ="wabi" id = "wabiPrice"> </p>
                 </td>            
                 <td class = "wabi">
-                    20
+                    10
                 </td>
                 <td> 
                     <p class = "wabi" id = "wabiTotalAmount"> </p>
@@ -176,6 +176,19 @@
                 </td>
                 <td> 
                     <p class = "requestNetwork" id = "requestNetworkTotalAmount"> </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class = "icon" > Icon </td>
+                <td> 
+                    <p class ="icon" id = "iconPrice"> </p>
+                </td>            
+                <td class = "icon">
+                    17.73
+                </td>
+                <td> 
+                    <p class = "icon" id = "iconTotalAmount"> </p>
                 </td>
             </tr>
            
@@ -228,6 +241,30 @@
                         <p id = "eidooPrice"> </p>
                     </td>
                 </tr>
+                
+                <tr> 
+                    <td>
+                        <p class = "SP"> RaiBlocks </p>
+                    </td>
+                    <td>
+                       5.43
+                    </td>
+                    <td>
+                        <p id = "raiBlockPrice"> </p>
+                    </td>
+                </tr>
+                
+                <tr> 
+                    <td>
+                        <p class = "SP"> Power Ledger </p>
+                    </td>
+                    <td>
+                       0.92
+                    </td>
+                    <td>
+                        <p id = "powerLedgerPrice"> </p>
+                    </td>
+                </tr>
             
                 
         
@@ -241,7 +278,7 @@
            
        </div>
     
-        <p id = "test"> </p>
+      
    
     
 
@@ -441,7 +478,7 @@
             {
             var myArr = JSON.parse(this.responseText);
             var price = document.getElementById("wabiPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("wabiTotalAmount").innerHTML = (price * 20).toFixed(2); 
+            document.getElementById("wabiTotalAmount").innerHTML = (price * 10).toFixed(2); 
             }
         }
         xmlhttp15.open("GET", "https://api.coinmarketcap.com/v1/ticker/wabi/", true);
@@ -460,6 +497,43 @@
         xmlhttp16.open("GET", "https://api.coinmarketcap.com/v1/ticker/stellar/", true);
         xmlhttp16.send();
         
+        var xmlhttp17 = new XMLHttpRequest();
+        xmlhttp17.onreadystatechange = function()
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+            var myArr = JSON.parse(this.responseText);
+            var price = document.getElementById("iconPrice").innerHTML = myArr[0].price_usd;
+            document.getElementById("iconTotalAmount").innerHTML = (price * 17.73).toFixed(2); 
+            }
+        }
+        xmlhttp17.open("GET", "https://api.coinmarketcap.com/v1/ticker/icon/", true);
+        xmlhttp17.send();
+        
+        
+        var xmlhttp18 = new XMLHttpRequest();
+        xmlhttp18.onreadystatechange = function()
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+            var myArr = JSON.parse(this.responseText);
+            var price = document.getElementById("raiBlockPrice").innerHTML = myArr[0].price_usd;
+            }
+        }
+        xmlhttp18.open("GET", "https://api.coinmarketcap.com/v1/ticker/raiblocks/", true);
+        xmlhttp18.send();
+        
+        var xmlhttp19 = new XMLHttpRequest();
+        xmlhttp19.onreadystatechange = function()
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+            var myArr = JSON.parse(this.responseText);
+            var price = document.getElementById("powerLedgerPrice").innerHTML = myArr[0].price_usd;
+            }
+        }
+        xmlhttp19.open("GET", "https://api.coinmarketcap.com/v1/ticker/power-ledger/", true);
+        xmlhttp19.send();
     
         
         
