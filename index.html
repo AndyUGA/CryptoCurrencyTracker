@@ -206,10 +206,15 @@
                     <p id = "test"> </p>
                 </td>
             </tr>
+            
+            
            
-        </tbody>    
+            
+            
+        </tbody>   
+         
     </table>
-        
+         <button onclick="myFunction()"> Calculate Total Price</button> 
         <table class = "table table-condensed"> 
             <thead> 
                 <tr>
@@ -294,6 +299,13 @@
     
     
     <script>
+        
+        
+        function myFunction() {
+            document.getElementById("test").innerHTML = num;
+            
+        }
+        
         
         var num = 0;
          
@@ -532,7 +544,7 @@
             var myArr = JSON.parse(this.responseText);
             var price = document.getElementById("powerLedgerPrice").innerHTML = myArr[0].price_usd;
                 
-            document.getElementById("test").innerHTML = num;
+            
             }
         }
         xmlhttp19.open("GET", "https://api.coinmarketcap.com/v1/ticker/power-ledger/", true);
