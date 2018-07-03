@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <title> Cyrpto Tracker </title>
     <meta charset="utf-8">
@@ -8,10 +9,14 @@
      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type = "text/javascript" src = "test.js"> </script>
 </head>
 <body>
+
+    <div ng-app="">
     <h1> <center> Cryptocurrency Tracker </center></h1>
-    <img src = "bitcoin.jpg">
+
     <div class = "all"> 
     <table class = "table table-condensed"> 
         
@@ -19,24 +24,43 @@
             <tr>
                 <th> Cryptocurrency </th>
                 <th> Current Price </th>
-                <th> You Have </th>
+                <th> Current Amount </th>
                 <th> Total Amount </th>
+
             </tr>
         </thead>
         <tbody>
+            
+           
+
             <tr>
                 <td class = "bitcoin"> Bitcoin </td>
                 <td> 
                     <p class = "bitcoin" id = "bitcoinPrice">  </p> 
                 </td>
                 <td class = "bitcoin"> 
-                    0     
+                   
+                    0
+                 <!--   
+                <input type="text" ng-model="name" placeholder="Enter amount">
+                -->
+                    
+                     
                 </td>
                 <td>
-                    <p class = "bitcoin" id = "bitcoinTotalAmount"> </p>
+                    
+                     <p class = "bitcoin" id = "bitcoinTotalAmount"> </p>
+                    
+                    <!--
+                   
+                    <h1> {{name}}</h1>
+                    -->
                 </td>
 
             </tr>
+
+
+         
             
             <tr>
                 <td class = "neo"> Neo </td>
@@ -44,7 +68,10 @@
                     <p class = "neo" id="neoPrice"> </p> 
                 </td>  
                 <td class = "neo"> 
+                    <!-- 
                     5.8
+                    --> 
+                    5
                 </td>
                 <td class = "neo">    
                     <p class = "neoTotalAmount" id = "neoTotalAmount"> </p>
@@ -57,7 +84,8 @@
                     <p class = "litecoin" id="iotaPrice"> </p> 
                 </td>  
                  <td class = "litecoin"> 
-                    20
+                     <!-- 20 -->
+                    5
                  </td>
                  <td>
                     <p class = "litecoin" id = "iotaTotalAmount"> </p>
@@ -70,7 +98,7 @@
                    <p class = "vertcoin" id="vertcoinPrice"> </p>
                 </td> 
                  <td class = "vertcoin">
-                    20
+                    5
                  </td>
                  <td>
                     <p class = "vertcoin" id = "vertcoinTotalAmount"> </p>
@@ -83,7 +111,7 @@
                     <p class ="carnado" id = "carnadoPrice"> </p>
                 </td>
                 <td class = "carnado"> 
-                    37
+                    5
                 </td>
                 <td>
                     <p class = "carnado" id = "carnadoTotalAmount"> </p>
@@ -96,7 +124,7 @@
                     <p class ="golem" id = "golemPrice"> </p>
                 </td>            
                 <td class = "golem">
-                    20
+                    5
                 </td>
                 <td> 
                     <p class = "golem" id = "golemTotalAmount"> </p>
@@ -109,7 +137,7 @@
                     <p class ="ark" id = "arkPrice"> </p>
                 </td>            
                 <td class = "ark">
-                    6
+                    5
                 </td>
                 <td> 
                     <p class = "ark" id = "arkTotalAmount"> </p>
@@ -122,7 +150,7 @@
                     <p class ="wabi" id = "wabiPrice"> </p>
                 </td>            
                 <td class = "wabi">
-                    10
+                    5
                 </td>
                 <td> 
                     <p class = "wabi" id = "wabiTotalAmount"> </p>
@@ -135,7 +163,7 @@
                     <p class ="substratum" id = "substratumPrice"> </p>
                 </td>            
                 <td class = "substratum">
-                    31
+                    5
                 </td>
                 <td> 
                     <p class = "substratum" id = "substratumTotalAmount"> </p>
@@ -148,7 +176,7 @@
                     <p class ="stellarLumens" id = "stellarLumensPrice"> </p>
                 </td>            
                 <td class = "stellarLumens">
-                    72
+                    5
                 </td>
                 <td> 
                     <p class = "stellarLumens" id = "stellarLumensTotalAmount"> </p>
@@ -161,7 +189,7 @@
                     <p class ="requestNetwork" id = "requestNetworkPrice"> </p>
                 </td>            
                 <td class = "requestNetwork">
-                    154
+                    5
                 </td>
                 <td> 
                     <p class = "requestNetwork" id = "requestNetworkTotalAmount"> </p>
@@ -174,7 +202,7 @@
                     <p class ="icon" id = "iconPrice"> </p>
                 </td>            
                 <td class = "icon">
-                    17.73
+                    5
                 </td>
                 <td> 
                     <p class = "icon" id = "iconTotalAmount"> </p>
@@ -187,7 +215,7 @@
                     <p class ="ripple" id = "ripplePrice"> </p>
                 </td>            
                 <td class = "ripple">
-                    48
+                    5
                 </td>
                 <td> 
                     <p class = "ripple" id = "rippleTotalAmount"> </p>
@@ -215,369 +243,13 @@
          
     </table>
          <button onclick="myFunction()"> Calculate Total Price</button> 
-        <table class = "table table-condensed"> 
-            <thead> 
-                <tr>
-                    <th> Coins Interested In </th>
-                    <th> Interested Price </th>
-                    <th> Current Price </th>
-                </tr>
-            </thead>
-            
-            <tbody>
-                
-                <tr> 
-                    <td>
-                        <p class = "AP"> Groestlcoin </p>
-                    </td>
-                    <td>
-                        0.75
-                    </td>
-                    <td>
-                        <p id = "grsPrice"> </p>
-                    </td>
-                </tr>
-                
-                <tr> 
-                    <td>
-                        <p class = "AP">Modum </p>
-                    </td>
-                    <td>
-                        1.50
-                    </td>
-                    <td>
-                        <p id = "modumPrice"> </p>
-                    </td>
-                </tr>
-                
-                <tr> 
-                    <td>
-                        <p class = "SP"> Eidoo </p>
-                    </td>
-                    <td>
-                        2.00
-                    </td>
-                    <td>
-                        <p id = "eidooPrice"> </p>
-                    </td>
-                </tr>
-                
-                <tr> 
-                    <td>
-                        <p class = "SP"> RaiBlocks </p>
-                    </td>
-                    <td>
-                       5.43
-                    </td>
-                    <td>
-                        <p id = "raiBlockPrice"> </p>
-                    </td>
-                </tr>
-                
-                <tr> 
-                    <td>
-                        <p class = "SP"> Power Ledger </p>
-                    </td>
-                    <td>
-                       0.92
-                    </td>
-                    <td>
-                        <p id = "powerLedgerPrice"> </p>
-                    </td>
-                </tr>       
-        
-            </tbody>
-        </table>
-        
-        <p class = "AP" id = "APsize"> Average Potential <p class = "SP" id = "SPsize"> Strong Potential</p>
-           
-       </div>
-        
-        
-    
+        </div>
 
     
-    
-    <script>
-        
-        
-        function myFunction() {
-            document.getElementById("test").innerHTML = num;
-            
-        }
-        
-        
-        var num = 0;
-         
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() 
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("bitcoinPrice").innerHTML = myArr[0].price_usd;
-            document.getElementById("bitcoinTotalAmount").innerHTML = (price * 0).toFixed(2);   
-            }
-        };
-        xmlhttp.open("GET", "https://api.coinmarketcap.com/v1/ticker/bitcoin/", true);
-        xmlhttp.send();
-   
-        var xmlhttp2 = new XMLHttpRequest();
-        xmlhttp2.onreadystatechange = function() 
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("neoPrice").innerHTML = myArr[0].price_usd; 
-            var totalAmount = document.getElementById("neoTotalAmount").innerHTML = (price * 5.8).toFixed(2);
-            num = parseInt(num) + parseInt(totalAmount);
-           
-            }
-        };
-        xmlhttp2.open("GET", "https://api.coinmarketcap.com/v1/ticker/neo/", true);
-        xmlhttp2.send();
-        
-        var xmlhttp3 = new XMLHttpRequest();
-        xmlhttp3.onreadystatechange = function() 
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("iotaPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("iotaTotalAmount").innerHTML = (price * 20).toFixed(2);
-            num = parseInt(num) + parseInt(totalAmount);
-            
-            }
-        };
-        xmlhttp3.open("GET", "https://api.coinmarketcap.com/v1/ticker/iota/", true);
-        xmlhttp3.send();
 
-        var xmlhttp4 = new XMLHttpRequest();
-        xmlhttp4.onreadystatechange = function() 
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("vertcoinPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("vertcoinTotalAmount").innerHTML = (price * 20).toFixed(2);
-            num = parseInt(num) + parseInt(totalAmount);
-            }
-        };
-        xmlhttp4.open("GET", "https://api.coinmarketcap.com/v1/ticker/vertcoin/", true);
-        xmlhttp4.send();
-
-
-        var xmlhttp5 = new XMLHttpRequest();
-        xmlhttp5.onreadystatechange = function() 
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("carnadoPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("carnadoTotalAmount").innerHTML = (price * 37).toFixed(2);
-            num = parseInt(num) + parseInt(totalAmount);
-            
-            }
-        };
-        xmlhttp5.open("GET", "https://api.coinmarketcap.com/v1/ticker/cardano/", true);
-        xmlhttp5.send();
-
-        var xmlhttp6 = new XMLHttpRequest();
-        xmlhttp6.onreadystatechange = function() 
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("golemPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("golemTotalAmount").innerHTML = (price * 20).toFixed(2);
-            num = parseInt(num) + parseInt(totalAmount);
-            }
-        };
-        xmlhttp6.open("GET", "https://api.coinmarketcap.com/v1/ticker/golem-network-tokens/", true);
-        xmlhttp6.send();
-        
-        var xmlhttp7 = new XMLHttpRequest();
-        xmlhttp7.onreadystatechange = function() 
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("arkPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("arkTotalAmount").innerHTML = (price * 6).toFixed(2);
-            num = parseInt(num) + parseInt(totalAmount);
-            }
-        };
-        xmlhttp7.open("GET", "https://api.coinmarketcap.com/v1/ticker/ark/", true);
-        xmlhttp7.send();
-        
-    
-        
-        var xmlhttp9 = new XMLHttpRequest();
-        xmlhttp9.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("grsPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("grsCurrentPrice").innerHTML = (price * 1).toFixed(2);
-            }
-        }
-        xmlhttp9.open("GET", "https://api.coinmarketcap.com/v1/ticker/groestlcoin/", true);
-        xmlhttp9.send();
-        
-        var xmlhttp10 = new XMLHttpRequest();
-        xmlhttp10.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("modumPrice").innerHTML = myArr[0].price_usd;
-            }
-        }
-        xmlhttp10.open("GET", "https://api.coinmarketcap.com/v1/ticker/modum/", true);
-        xmlhttp10.send();
-        
-    
-        var xmlhttp11 = new XMLHttpRequest();
-        xmlhttp11.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("eidooPrice").innerHTML = myArr[0].price_usd;
-           
-            }
-        }
-        xmlhttp11.open("GET", "https://api.coinmarketcap.com/v1/ticker/eidoo/", true);
-        xmlhttp11.send();
-        
-       
-        
-        var xmlhttp13 = new XMLHttpRequest();
-        xmlhttp13.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("substratumPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("substratumTotalAmount").innerHTML = (price * 31).toFixed(2);
-            num = parseInt(num) + parseInt(totalAmount);
-            }
-        }
-        xmlhttp13.open("GET", "https://api.coinmarketcap.com/v1/ticker/substratum/", true);
-        xmlhttp13.send();
-        
-        var xmlhttp14 = new XMLHttpRequest();
-        xmlhttp14.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("requestNetworkPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("requestNetworkTotalAmount").innerHTML = (price * 154).toFixed(2);
-            num = parseInt(num) + parseInt(totalAmount);
-            }
-        }
-        xmlhttp14.open("GET", "https://api.coinmarketcap.com/v1/ticker/request-network/", true);
-        xmlhttp14.send();
-        
-        var xmlhttp15 = new XMLHttpRequest();
-        xmlhttp15.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("wabiPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("wabiTotalAmount").innerHTML = (price * 10).toFixed(2);
-            num = parseInt(num) + parseInt(totalAmount);   
-            }
-        }
-        xmlhttp15.open("GET", "https://api.coinmarketcap.com/v1/ticker/wabi/", true);
-        xmlhttp15.send();
-        
-        var xmlhttp16 = new XMLHttpRequest();
-        xmlhttp16.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("stellarLumensPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("stellarLumensTotalAmount").innerHTML = (price * 72).toFixed(2); 
-            num = parseInt(num) + parseInt(totalAmount);
-            }
-        }
-        xmlhttp16.open("GET", "https://api.coinmarketcap.com/v1/ticker/stellar/", true);
-        xmlhttp16.send();
-        
-        var xmlhttp17 = new XMLHttpRequest();
-        xmlhttp17.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("iconPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("iconTotalAmount").innerHTML = (price * 17.73).toFixed(2);
-            num = parseInt(num) + parseInt(totalAmount);    
-            }
-        }
-        xmlhttp17.open("GET", "https://api.coinmarketcap.com/v1/ticker/icon/", true);
-        xmlhttp17.send();
-        
-        
-        var xmlhttp18 = new XMLHttpRequest();
-        xmlhttp18.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("raiBlockPrice").innerHTML = myArr[0].price_usd;
-            }
-        }
-        xmlhttp18.open("GET", "https://api.coinmarketcap.com/v1/ticker/raiblocks/", true);
-        xmlhttp18.send();
-        
-        var xmlhttp19 = new XMLHttpRequest();
-        xmlhttp19.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("powerLedgerPrice").innerHTML = myArr[0].price_usd;
-                
-            
-            }
-        }
-        xmlhttp19.open("GET", "https://api.coinmarketcap.com/v1/ticker/power-ledger/", true);
-        xmlhttp19.send();
-        
-        var xmlhttp20 = new XMLHttpRequest();
-        xmlhttp20.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("ripplePrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("rippleTotalAmount").innerHTML = (price * 48).toFixed(2);
-            num = parseInt(num) + parseInt(totalAmount);
-            }
-        }
-        xmlhttp20.open("GET", "https://api.coinmarketcap.com/v1/ticker/ripple/", true);
-        xmlhttp20.send();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-   </script>
-    
-
+        </div>
 </body>
+      
 </html> 
 
 
