@@ -1,3 +1,6 @@
+![Image](https://newb.imgix.net/a7b1cbd217188230417.png)
+
+
 # Personal Cyrptocurrency Portfolio Tracker
 
 My personal cryptocurrency website that allows me to view the value of my current portfolio.
@@ -23,3 +26,4 @@ My personal cryptocurrency website that allows me to view the value of my curren
 http://cobweb.cs.uga.edu/~truong/
 - Falsified data is used in preview for security purposes 
 
+  
