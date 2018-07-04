@@ -1,12 +1,11 @@
 /*eslint-env browser*/
 
 function calculateTotal() {
-            document.getElementById("totalAmount").innerHTML = num;
-            
-        }
+    document.getElementById("totalAmount").innerHTML = num;
+}
 
 
-var num = 0;
+        var num = 0;
 
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() 
@@ -14,7 +13,7 @@ var num = 0;
         if (this.readyState == 4 && this.status == 200) 
         {
         var myArr = JSON.parse(this.responseText);
-        var price = document.getElementById("bitcoinPrice").innerHTML = myArr[0].price_usd;
+        var price = document.getElementById("bitcoinPrice").innerHTML = Number(myArr[0].price_usd).toFixed(2);
         document.getElementById("bitcoinTotalAmount").innerHTML = (price * 0).toFixed(2);   
         }
     };
@@ -27,7 +26,8 @@ var num = 0;
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("neoPrice").innerHTML = myArr[0].price_usd; 
+            var price = document.getElementById("neoPrice").innerHTML = Number(myArr[0].price_usd).toFixed(2); 
+            document.getElementById("neoPrice").innerHTML = price;
             var totalAmount = document.getElementById("neoTotalAmount").innerHTML = (price * 5).toFixed(2);
             num = parseInt(num) + parseInt(totalAmount);
            
@@ -42,7 +42,7 @@ var num = 0;
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("iotaPrice").innerHTML = myArr[0].price_usd;
+            var price = document.getElementById("iotaPrice").innerHTML = Number(myArr[0].price_usd).toFixed(2);
             var totalAmount = document.getElementById("iotaTotalAmount").innerHTML = (price * 5).toFixed(2);
             num = parseInt(num) + parseInt(totalAmount);
             
@@ -57,7 +57,7 @@ var num = 0;
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("vertcoinPrice").innerHTML = myArr[0].price_usd;
+            var price = document.getElementById("vertcoinPrice").innerHTML = Number(myArr[0].price_usd).toFixed(2);
             var totalAmount = document.getElementById("vertcoinTotalAmount").innerHTML = (price * 5).toFixed(2);
             num = parseInt(num) + parseInt(totalAmount);
             }
@@ -72,7 +72,7 @@ var num = 0;
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("carnadoPrice").innerHTML = myArr[0].price_usd;
+            var price = document.getElementById("carnadoPrice").innerHTML = Number(myArr[0].price_usd).toFixed(2);
             var totalAmount = document.getElementById("carnadoTotalAmount").innerHTML = (price * 5).toFixed(2);
             num = parseInt(num) + parseInt(totalAmount);
             
@@ -87,7 +87,7 @@ var num = 0;
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("golemPrice").innerHTML = myArr[0].price_usd;
+            var price = document.getElementById("golemPrice").innerHTML = Number(myArr[0].price_usd).toFixed(2);
             var totalAmount = document.getElementById("golemTotalAmount").innerHTML = (price * 5).toFixed(2);
             num = parseInt(num) + parseInt(totalAmount);
             }
@@ -101,23 +101,13 @@ var num = 0;
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("arkPrice").innerHTML = myArr[0].price_usd;
+            var price = document.getElementById("arkPrice").innerHTML = Number(myArr[0].price_usd).toFixed(2);
             var totalAmount = document.getElementById("arkTotalAmount").innerHTML = (price * 5).toFixed(2);
             num = parseInt(num) + parseInt(totalAmount);
             }
         };
         xmlhttp7.open("GET", "https://api.coinmarketcap.com/v1/ticker/ark/", true);
         xmlhttp7.send();
-        
-    
-        
-
-        
-       
-        
-    
-     
-        
        
         
         var xmlhttp13 = new XMLHttpRequest();
@@ -126,7 +116,7 @@ var num = 0;
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("substratumPrice").innerHTML = myArr[0].price_usd;
+            var price = document.getElementById("substratumPrice").innerHTML = Number(myArr[0].price_usd).toFixed(2);
             var totalAmount = document.getElementById("substratumTotalAmount").innerHTML = (price * 5).toFixed(2);
             num = parseInt(num) + parseInt(totalAmount);
             }
@@ -140,7 +130,7 @@ var num = 0;
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("requestNetworkPrice").innerHTML = myArr[0].price_usd;
+            var price = document.getElementById("requestNetworkPrice").innerHTML = Number(myArr[0].price_usd).toFixed(2);
             var totalAmount = document.getElementById("requestNetworkTotalAmount").innerHTML = (price * 5).toFixed(2);
             num = parseInt(num) + parseInt(totalAmount);
             }
@@ -154,7 +144,7 @@ var num = 0;
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("wabiPrice").innerHTML = myArr[0].price_usd;
+            var price = document.getElementById("wabiPrice").innerHTML = Number(myArr[0].price_usd).toFixed(2);
             var totalAmount = document.getElementById("wabiTotalAmount").innerHTML = (price * 5).toFixed(2);
             num = parseInt(num) + parseInt(totalAmount);   
             }
@@ -168,7 +158,7 @@ var num = 0;
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("stellarLumensPrice").innerHTML = myArr[0].price_usd;
+            var price = document.getElementById("stellarLumensPrice").innerHTML = Number(myArr[0].price_usd).toFixed(2);
             var totalAmount = document.getElementById("stellarLumensTotalAmount").innerHTML = (price * 5).toFixed(2); 
             num = parseInt(num) + parseInt(totalAmount);
             }
@@ -182,7 +172,7 @@ var num = 0;
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("iconPrice").innerHTML = myArr[0].price_usd;
+            var price = document.getElementById("iconPrice").innerHTML = Number(myArr[0].price_usd).toFixed(2);
             var totalAmount = document.getElementById("iconTotalAmount").innerHTML = (price * 5).toFixed(2);
             num = parseInt(num) + parseInt(totalAmount);    
             }
@@ -201,7 +191,7 @@ var num = 0;
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("ripplePrice").innerHTML = myArr[0].price_usd;
+            var price = document.getElementById("ripplePrice").innerHTML = Number(myArr[0].price_usd).toFixed(2);
             var totalAmount = document.getElementById("rippleTotalAmount").innerHTML = (price * 5).toFixed(2);
             num = parseInt(num) + parseInt(totalAmount);
             }

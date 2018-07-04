@@ -1,12 +1,8 @@
-img {
-    width: 100%;
-    height: auto;
-}
 
 
 
-.all {
-    font-size: 50px;
+body {
+    font-size: 23px;
 }
 
 
@@ -69,7 +65,7 @@ img {
 
 
 .icon {
-    width: 25px;
+    width: 20px;
     height: auto;
 }
 
