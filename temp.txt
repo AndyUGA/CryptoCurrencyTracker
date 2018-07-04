@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Cryptocurrency Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script type = "text/javascript" src = "test.js"> </script>
+</head>
+<body>
+<div class="container-fluid">
+ <center><h1>Personal Cryptocurrency Tracker</h1> </center>                                                                                    
+  
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th> Cryptocurrency </th>
+          <th> Current Price </th>
+          <th> Current Amount </th>
+          <th> Total Amount </th>
+    
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td class = "bitcoin"> 
+                <img class = "icon" src = >  
+                Bitcoin 
+            </td>
+            <td> 
+               <p class = "bitcoin" id = "bitcoinPrice"> </p>     
+            </td>
+            <td class = "bitcoin"> 
+                0
+            </td>
+            <td>
+                 <p class = "bitcoin" id = "bitcoinTotalAmount"> </p>
+            </td>
+        </tr>
+
+
+         
+            
+            <tr>
+                <td class = "neo"> <img class = "icon" src = "https://neo.org/images/neo-logo/1024.png">  Neo </td>
+                <td>
+                    <p class = "neo" id="neoPrice"> </p> 
+                </td>  
+                <td class = "neo"> 
+                    <!-- 
+                    5.8
+                    --> 
+                    5
+                </td>
+                <td class = "neo">    
+                    <p class = "neoTotalAmount" id = "neoTotalAmount"> </p>
+                </td>
+            </tr>
+        
+             <tr>
+                <td class = "litecoin"> <img class = "icon" src = "https://cdn2.iconfinder.com/data/icons/cryptocurrency-5/100/cryptocurrency_blockchain_crypto-07-512.png"> IOTA </td>
+                <td>
+                    <p class = "litecoin" id="iotaPrice"> </p> 
+                </td>  
+                 <td class = "litecoin"> 
+                     <!-- 20 -->
+                    5
+                 </td>
+                 <td>
+                    <p class = "litecoin" id = "iotaTotalAmount"> </p>
+                 </td>
+            </tr>
+            
+             <tr>
+                <td class = "vertcoin"> <img class = "icon" src = "http://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Vertcoin-VTC-icon.png"> Vertcoin </td>
+                <td>     
+                   <p class = "vertcoin" id="vertcoinPrice"> </p>
+                </td> 
+                 <td class = "vertcoin">
+                    5
+                 </td>
+                 <td>
+                    <p class = "vertcoin" id = "vertcoinTotalAmount"> </p>
+                 </td>
+            </tr>
+            
+            <tr>
+                <td class = "carnado"> <img class = "icon" src = "http://www.freelogovectors.net/wp-content/uploads/2018/02/cardano_logo.png"> Cardano </td>
+                <td> 
+                    <p class ="carnado" id = "carnadoPrice"> </p>
+                </td>
+                <td class = "carnado"> 
+                    5
+                </td>
+                <td>
+                    <p class = "carnado" id = "carnadoTotalAmount"> </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class = "golem" > <img class = "icon" src = "https://www.worldcryptoindex.com/wp-content/uploads/2018/01/golem-logo-300.png"> Golem </td>
+                <td> 
+                    <p class ="golem" id = "golemPrice"> </p>
+                </td>            
+                <td class = "golem">
+                    5
+                </td>
+                <td> 
+                    <p class = "golem" id = "golemTotalAmount"> </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class = "ark" > <img class = "icon" src = "https://cdn.worldvectorlogo.com/logos/ark.svg"> Ark </td>
+                <td> 
+                    <p class ="ark" id = "arkPrice"> </p>
+                </td>            
+                <td class = "ark">
+                    5
+                </td>
+                <td> 
+                    <p class = "ark" id = "arkTotalAmount"> </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class = "wabi" > <img class = "icon" src = "https://i.redditmedia.com/YYwSVz_xt0-ZGn1SjZfgFH7rwkFVYy6_UYnNF98YsIo.jpg?s=8d2c8824745345dfff708d8ba65da29b"> WaBi(蛙币) </td>
+                <td> 
+                    <p class ="wabi" id = "wabiPrice"> </p>
+                </td>            
+                <td class = "wabi">
+                    5
+                </td>
+                <td> 
+                    <p class = "wabi" id = "wabiTotalAmount"> </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class = "substratum" > <img class = "icon" src = "https://steemitimages.com/DQmNzMLfhN3H5fhBE4PzNenwH8NJ3wnecyDfczDy54B4aS4/Substratum-Icon.png"> Substratum </td>
+                <td> 
+                    <p class ="substratum" id = "substratumPrice"> </p>
+                </td>            
+                <td class = "substratum">
+                    5
+                </td>
+                <td> 
+                    <p class = "substratum" id = "substratumTotalAmount"> </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class = "stellarLumens" > <img class = "icon" src = "https://cdn4.iconfinder.com/data/icons/crypto-currency-and-coin-2/256/stellar_xlm-512.png"> Stellar  </td>
+                <td> 
+                    <p class ="stellarLumens" id = "stellarLumensPrice"> </p>
+                </td>            
+                <td class = "stellarLumens">
+                    5
+                </td>
+                <td> 
+                    <p class = "stellarLumens" id = "stellarLumensTotalAmount"> </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class = "requestNetwork" > <img class = "icon" src = "http://icons.iconarchive.com/icons/cjdowner/cryptocurrency/256/Request-Network-icon.png"> Request Network </td>
+                <td> 
+                    <p class ="requestNetwork" id = "requestNetworkPrice"> </p>
+                </td>            
+                <td class = "requestNetwork">
+                    5
+                </td>
+                <td> 
+                    <p class = "requestNetwork" id = "requestNetworkTotalAmount"> </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class = "icon" > <img class = "icon" src = "https://bihu2001.oss-cn-shanghai.aliyuncs.com/img/d57a3187c08ba50461e5182ecea0d0fb.png"> Icon </td>
+                <td> 
+                    <p class ="icon" id = "iconPrice"> </p>
+                </td>            
+                <td class = "icon">
+                    5
+                </td>
+                <td> 
+                    <p class = "icon" id = "iconTotalAmount"> </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class = "ripple" > <img class = "icon" src = "https://steemitimages.com/DQmTc7sW3tj7JWYNrLxMiXcE6za6FDr2mjtfSyMnaG33vfr/mzl-xuakzeqg.png"> Ripple </td>
+                <td> 
+                    <p class ="ripple" id = "ripplePrice"> </p>
+                </td>            
+                <td class = "ripple">
+                    5
+                </td>
+                <td> 
+                    <p class = "ripple" id = "rippleTotalAmount"> </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td> <button onclick="calculateTotal()"> Calculate Total Price</button> </td>
+                <td> 
+                    <p > </p>
+                </td>            
+                <td>
+                    
+                </td>
+                <td> 
+                    <p id = "test"> </p>
+                </td>
+            </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
+

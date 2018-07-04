@@ -1,7 +1,7 @@
 /*eslint-env browser*/
 
 function calculateTotal() {
-            document.getElementById("test").innerHTML = num;
+            document.getElementById("totalAmount").innerHTML = num;
             
         }
 
