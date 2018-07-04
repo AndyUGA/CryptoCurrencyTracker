@@ -4,13 +4,6 @@
         }
 
 
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-    $scope.name = "John Doe";
-});
-
-
-
 var num = 0;
 
         var xmlhttp = new XMLHttpRequest();
