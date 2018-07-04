@@ -1,4 +1,6 @@
- function myFunction() {
+/*eslint-env browser*/
+
+function calculateTotal() {
             document.getElementById("test").innerHTML = num;
             
         }
@@ -109,44 +111,12 @@ var num = 0;
         
     
         
-        var xmlhttp9 = new XMLHttpRequest();
-        xmlhttp9.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("grsPrice").innerHTML = myArr[0].price_usd;
-            var totalAmount = document.getElementById("grsCurrentPrice").innerHTML = (price * 5).toFixed(2);
-            }
-        }
-        xmlhttp9.open("GET", "https://api.coinmarketcap.com/v1/ticker/groestlcoin/", true);
-        xmlhttp9.send();
+
         
-        var xmlhttp10 = new XMLHttpRequest();
-        xmlhttp10.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("modumPrice").innerHTML = myArr[0].price_usd;
-            }
-        }
-        xmlhttp10.open("GET", "https://api.coinmarketcap.com/v1/ticker/modum/", true);
-        xmlhttp10.send();
+       
         
     
-        var xmlhttp11 = new XMLHttpRequest();
-        xmlhttp11.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("eidooPrice").innerHTML = myArr[0].price_usd;
-           
-            }
-        }
-        xmlhttp11.open("GET", "https://api.coinmarketcap.com/v1/ticker/eidoo/", true);
-        xmlhttp11.send();
+     
         
        
         
@@ -221,31 +191,9 @@ var num = 0;
         xmlhttp17.send();
         
         
-        var xmlhttp18 = new XMLHttpRequest();
-        xmlhttp18.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("raiBlockPrice").innerHTML = myArr[0].price_usd;
-            }
-        }
-        xmlhttp18.open("GET", "https://api.coinmarketcap.com/v1/ticker/raiblocks/", true);
-        xmlhttp18.send();
+       
         
-        var xmlhttp19 = new XMLHttpRequest();
-        xmlhttp19.onreadystatechange = function()
-        {
-            if (this.readyState == 4 && this.status == 200) 
-            {
-            var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("powerLedgerPrice").innerHTML = myArr[0].price_usd;
-                
-            
-            }
-        }
-        xmlhttp19.open("GET", "https://api.coinmarketcap.com/v1/ticker/power-ledger/", true);
-        xmlhttp19.send();
+    
         
         var xmlhttp20 = new XMLHttpRequest();
         xmlhttp20.onreadystatechange = function()

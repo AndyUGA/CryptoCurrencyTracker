@@ -68,27 +68,10 @@ img {
 
 
 
-
-
-
-
-
-.AP {
-    color: orange;
+.icon {
+    width: 25px;
+    height: auto;
 }
-
-#APsize {
-    font-size: 25px;
-}
-
-.SP {
-    color: lawngreen;
-}
-
-#SPsize {
-    font-size: 25px;
-}
-
 
 
 
