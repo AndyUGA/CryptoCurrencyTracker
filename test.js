@@ -17,7 +17,7 @@ function calculateTotal() {
         * Request data for top 20 cryptocurrencies by total 
         * marketcap from CoinMarketCap API
         */
-        $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=20&sort=rank&structure=array")
+        $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=50&sort=rank&structure=array")
             .then(function(myArr) {
             $scope.myWelcome = myArr;
         });

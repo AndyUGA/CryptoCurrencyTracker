@@ -11,9 +11,14 @@
 </head>
     
     
-            <td>  </td>
 <body ng-app="myApp" ng-controller="myCtrl" class = "container">
-  <center> <h1> Cryptocurrency Price Tracker</h1> </center>  
+  <center> <h1> Cryptocurrency Price Tracker</h1> </center>
+    
+    <div class=" form-group has-feedback">
+        <input type = "text" class = "form-control" ng-model = "search" placeholder="Search "> 
+                <i class = "glyphicon glyphicon-search form-control-feedback"> </i>
+    </div>
+
 <table class="table">
   <thead>
     <tr>
@@ -24,11 +29,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr  ng-repeat="(key, value) in myWelcome.data.data" >
+
+    <tr  ng-repeat="(key, value) in myWelcome.data.data | filter : search" >
       <th scope="row"> <img src = "https://s2.coinmarketcap.com/static/img/coins/32x32/{{value.id}}.png"> {{value.name}} </th>
       <td>{{value.quotes.USD.price}}</td>
       <td><input  type = "text" style = "width: 40%" ng-model = "amount"> </td>
-      <td>{{(+amount) * value.quotes.USD.price | currency}}</td>
+      <td>{{(+amount) * value.quotes.USD.price }}</td>
     </tr>
   
   </tbody>
