@@ -24,6 +24,6 @@ My personal cryptocurrency website that allows me to view the value of my curren
 ------------------------------------------------------------------------------------------------------------------------------  
 ## Live Preview
 http://cobweb.cs.uga.edu/~truong/
-- Falsified data is used in preview for security purposes 
+
 
   
