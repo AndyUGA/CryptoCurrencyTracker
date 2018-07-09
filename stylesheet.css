@@ -6,62 +6,10 @@ body {
 }
 
 
-.bitcoin {
-    color: orange;
+
+.test {
+    text-align: center;
 }
-
-
-.neo {
-    color: greenyellow;
-}
-
-
-.litecoin {
-    color: gray;
-}
-
-.vertcoin {
-    color: darkgreen;
-}
-
-
-.carnado {
-    color: deepskyblue;
-}
-
-.golem {
-    color: gray;
-}
-
-.ark {
-    color: red;
-}
-
-.wabi {
-    color: forestgreen;
-}
-
-.substratum {
-    color: indianred;
-}
-
-.stellarLumens {
-    color: lightblue;
-}
-
-.requestNetwork {
-    color: cyan;
-}
-
-.icon {
-    color: deepskyblue
-}
-
-.ripple {
-    color: lightskyblue;
-}
-
-
 
 
 .icon {
@@ -70,4 +18,6 @@ body {
 }
 
 
-
+.textBox {
+    width: 50%;
+}

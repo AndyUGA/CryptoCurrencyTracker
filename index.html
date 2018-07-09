@@ -7,147 +7,31 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script type = "text/javascript" src = "test.js"> </script>
 </head>
-<body ng-app="myApp" ng-controller="myCtrl">
-
     
-<div class="container-fluid">
-    <p> {{myWelcome.data.data[0].symbol}} </p>
-  <center> <h1> Cryptocurrency Tracker</h1> </center>
-                                                                                   
-  <div class="table-responsive">          
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Coin</th>
-        <th>Price</th>
-        <th>Amount</th>
-        <th>Total</th>
-      </tr>
-    </thead>
-    <tbody>
-        <div ng-repeat="(key, value) in myWelcome.data.data" class="container">
-        
-
     
-            <td><img class = "icon" src = "https://cdn.iconscout.com/public/images/icon/free/png-512/bitcoin-cryptocurrency-crypto-currency-coin-logo-3a4fff75be1b0f49-512x512.png">  {{value.name}}</td>
             <td>  </td>
-            <td>0</td>
-            <td id = "bitcoinTotalAmount"></td>
-
-        
-        <tr class = "neo">
-            <td><img class = "icon" src = "https://neo.org/images/neo-logo/1024.png"> Neo</td>
-            <td id = "neoPrice" ></td>
-            <td>5</td>
-            <td id = "neoTotalAmount"></td>
-        </tr>
-        
-        <tr class = "litecoin">
-            <td><img class = "icon" src = "https://cdn2.iconfinder.com/data/icons/cryptocurrency-5/100/cryptocurrency_blockchain_crypto-07-512.png"> IOTA </td>
-            <td id = "iotaPrice" ></td>
-            <td>5</td>
-            <td id = "iotaTotalAmount"></td>
-        </tr>
-        
-        <tr class = "vertcoin">
-            <td><img class = "icon" src = "http://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Vertcoin-VTC-icon.png"> Vertcoin </td>
-            <td id = "vertcoinPrice" ></td>
-            <td>5</td>
-            <td id = "vertcoinTotalAmount"></td>
-        </tr>
-        
-        <tr class = "carnado">
-            <td><img class = "icon" src = "http://www.freelogovectors.net/wp-content/uploads/2018/02/cardano_logo.png"> Cardano </td>
-            <td id = "carnadoPrice" ></td>
-            <td>5</td>
-            <td id = "carnadoTotalAmount"></td>
-        </tr>
-        
-        <tr class = "golem">
-            <td><img class = "icon" src = "https://www.worldcryptoindex.com/wp-content/uploads/2018/01/golem-logo-300.png"> Golem </td>
-            <td id = "golemPrice" ></td>
-            <td>5</td>
-            <td id = "golemTotalAmount"></td>
-        </tr>
-        
-        <tr class = "ark">
-            <td><img class = "icon" src = "https://cdn.worldvectorlogo.com/logos/ark.svg"> Ark </td>
-            <td id = "arkPrice" ></td>
-            <td>5</td>
-            <td id = "arkTotalAmount"></td>
-        </tr>
-        
-        <tr class = "wabi">
-            <td><img class = "icon" src = "https://i.redditmedia.com/YYwSVz_xt0-ZGn1SjZfgFH7rwkFVYy6_UYnNF98YsIo.jpg?s=8d2c8824745345dfff708d8ba65da29b"> WaBi(蛙币)  </td>
-            <td id = "wabiPrice" ></td>
-            <td>5</td>
-            <td id = "wabiTotalAmount"></td>
-        </tr>
-        
-        <tr class = "substratum">
-            <td><img class = "icon" src = "https://steemitimages.com/DQmNzMLfhN3H5fhBE4PzNenwH8NJ3wnecyDfczDy54B4aS4/Substratum-Icon.png"> Substratum </td>
-            <td id = "substratumPrice" ></td>
-            <td>5</td>
-            <td id = "substratumTotalAmount"></td>
-        </tr>
-        
-        <tr class = "stellarLumens">
-            <td><img class = "icon" src = "https://cdn4.iconfinder.com/data/icons/crypto-currency-and-coin-2/256/stellar_xlm-512.png"> Stellar Lumens </td>
-            <td id = "stellarLumensPrice" ></td>
-            <td>5</td>
-            <td id = "stellarLumensTotalAmount"></td>
-        </tr>
-        
-        <tr class = "requestNetwork">
-            <td><img class = "icon" src = "http://icons.iconarchive.com/icons/cjdowner/cryptocurrency/256/Request-Network-icon.png"> Request Network </td>
-            <td id = "requestNetworkPrice" ></td>
-            <td>5</td>
-            <td id = "requestNetworkTotalAmount"></td>
-        </tr>
-        
-        <tr class = "icon">
-            <td><img class = "icon" src = "https://bihu2001.oss-cn-shanghai.aliyuncs.com/img/d57a3187c08ba50461e5182ecea0d0fb.png"> Icon </td>
-            <td id = "iconPrice" ></td>
-            <td>5</td>
-            <td id = "iconTotalAmount"></td>
-        </tr>
-        
-        <tr class = "ripple">
-            <td><img class = "icon" src = "https://steemitimages.com/DQmTc7sW3tj7JWYNrLxMiXcE6za6FDr2mjtfSyMnaG33vfr/mzl-xuakzeqg.png"> Ripple </td>
-            <td id = "ripplePrice" ></td>
-            <td>5</td>
-            <td id = "rippleTotalAmount"></td>
-        </tr>
-        
-        <tr>
-            <td> 
-                <button onclick="calculateTotal()"> 
-                    Calculate Total Price
-                </button> 
-            </td>
-            <td> 
-                
-            </td>  
-            
-            <td>
-            </td>
-            <td> 
-                <p id = "totalAmount"> </p>
-            </td>
-        </tr>
-        
-
-        
-      
-        </div>
- 
-    </tbody>
-  </table>
-  </div>
-</div>
-
+<body ng-app="myApp" ng-controller="myCtrl" class = "container">
+  <center> <h1> Cryptocurrency Price Tracker</h1> </center>  
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name </th>
+      <th scope="col">Price</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  ng-repeat="(key, value) in myWelcome.data.data" >
+      <th scope="row"> <img src = "https://s2.coinmarketcap.com/static/img/coins/32x32/{{value.id}}.png"> {{value.name}} </th>
+      <td>{{value.quotes.USD.price}}</td>
+      <td><input  type = "text" style = "width: 40%" ng-model = "amount"> </td>
+      <td>{{(+amount) * value.quotes.USD.price | currency}}</td>
+    </tr>
+  
+  </tbody>
+</table>
 </body>
 </html>
