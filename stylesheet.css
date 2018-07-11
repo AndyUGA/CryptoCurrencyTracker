@@ -1,20 +1,17 @@
 
 
-
-body {
-    font-size: 23px;
+* {
+   font-family: "Helvetica-Light", Arial;
 }
 
 
-.test {
-    width: 40%;
+.userInput {
+    width: 50%;
 }
 
 
-.icon {
-    width: 20px;
-    height: auto;
-}
+
+
 
 
 .textBox {
