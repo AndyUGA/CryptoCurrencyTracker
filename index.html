@@ -35,7 +35,7 @@
     <tr  ng-repeat="(key, value) in myWelcome.data.data | filter : search" >
       <th scope="row"> <img src = "https://s2.coinmarketcap.com/static/img/coins/32x32/{{value.id}}.png"> {{value.name}} </th>
       <td>{{value.quotes.USD.price | currency}}</td>
-      <td><input class = "userInput" type = "text" ng-model = "amount"> </td>
+      <td><input class = "userInput" type = "number" ng-model = "amount"> </td>
       <td>{{(+amount) * value.quotes.USD.price | currency}}</td>
     </tr>
   
