@@ -13,7 +13,7 @@ My personal cryptocurrency website that allows me to view the value of my curren
 - Javascript
 - [Bootstrap](https://getbootstrap.com) - Used for responsive design and layout structure 
 - [Angular JS](https://angularjs.org) - Used for retreiving data from CoinMarketCap API and two-way data binding 
-- [CoinMarketCap API](https://coinmarketcap.com/api/) - Used to pull live data of coin's price
+- [CoinMarketCap API](https://coinmarketcap.com/api/) - Used to pull cryptcurrency data
 
 ------------------------------------------------------------------------------------------------------------------------------
 ## Features
@@ -23,7 +23,6 @@ My personal cryptocurrency website that allows me to view the value of my curren
 
 ------------------------------------------------------------------------------------------------------------------------------  
 ## Live Preview
-http://cobweb.cs.uga.edu/~truong/
-
+http://cobweb.cs.uga.edu/~truong/tracker/
 
   
