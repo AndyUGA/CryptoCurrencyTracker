@@ -20,7 +20,6 @@
         <input type = "text" class = "form-control" ng-model = "search" placeholder="Search "> 
                 <i class = "glyphicon glyphicon-search form-control-feedback"> </i>
     </div>
-
 <table class="table">
   <thead>
     <tr>
@@ -35,8 +34,8 @@
     <tr  ng-repeat="(key, value) in myWelcome.data.data | filter : search" >
       <th scope="row"> <img src = "https://s2.coinmarketcap.com/static/img/coins/32x32/{{value.id}}.png"> {{value.name}} </th>
       <td>{{value.quotes.USD.price | currency}}</td>
-      <td><input class = "userInput" type = "number" ng-model = "amount"> </td>
-      <td>{{(+amount) * value.quotes.USD.price | currency}}</td>
+      <td><input ng-change = "updateTotal()" class = "userInput" type = "number" ng-model = "value.amount"> </td>
+      <td>{{(+value.amount) * value.quotes.USD.price | currency}}</td>
     </tr>
   
   </tbody>

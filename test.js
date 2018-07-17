@@ -1,15 +1,14 @@
 /*eslint-env browser*/
-
-function calculateTotal() {
-    document.getElementById("totalAmount").innerHTML = num;
-}
-        
-        var app = angular.module('myApp', []);
+    
 
 
-        var num = 0;
 
-        app.controller('myCtrl', function($scope, $http, $timeout) {
+    var app = angular.module('myApp', []);
+    
+
+ 
+
+    app.controller('myCtrl', function($scope, $http) {
         
         
         
@@ -21,6 +20,15 @@ function calculateTotal() {
             .then(function(myArr) {
             $scope.myWelcome = myArr;
         });
+        
+        
+        
+        $scope.updateTotal = function(){
+            $scope.total = 0;
+            angular.forEach($scope.myWelcome.data.data, function(value){
+            $scope.total += value.amount * value.quotes.USD.price;
+        });
+        };
     
         
     });
