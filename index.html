@@ -3,15 +3,18 @@
 <head>
     <title> Portfolio Tracker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+      <script type = "text/javascript" src = "test.js"> </script>
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type = "text/javascript" src = "test.js"> </script>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
 </head>
     
+
     
 <body ng-app="myApp" ng-controller="myCtrl" class = "container">
   <center> <h1> Portfolio Tracker</h1> </center>
@@ -31,12 +34,18 @@
   </thead>
   <tbody>
 
-    <tr  ng-repeat="(key, value) in myWelcome.data.data | filter : search" >
+    <tr  ng-repeat="value in dataArray.data.data | filter : search" >
+        
+     
+
       <th scope="row"> <img src = "https://s2.coinmarketcap.com/static/img/coins/32x32/{{value.id}}.png"> {{value.name}} </th>
+    
       <td>{{value.quotes.USD.price | currency}}</td>
       <td><input ng-change = "updateTotal()" class = "userInput" type = "number" ng-model = "value.amount"> </td>
       <td>{{(+value.amount) * value.quotes.USD.price | currency}}</td>
     </tr>
+    
+      
   
   </tbody>
 </table>
