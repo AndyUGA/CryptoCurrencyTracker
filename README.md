@@ -11,16 +11,17 @@ My personal cryptocurrency website that allows me to view the value of my curren
 - HTML
 - CSS
 - Javascript
-- [Bootstrap](https://getbootstrap.com) - Used for responsive design and layout structure 
-- [Angular JS](https://angularjs.org) - Used for retreiving data from CoinMarketCap API and two-way data binding 
-- [CoinMarketCap API](https://coinmarketcap.com/api/) - Used to pull cryptcurrency data
+- [Bootstrap](https://getbootstrap.com)
+- [Angular JS](https://angularjs.org)  
+- [CoinMarketCap API](https://coinmarketcap.com/api/) 
 
 ------------------------------------------------------------------------------------------------------------------------------
 ## Features
-- Responsive design  
-- Search function to filter results  
-- Immediately reflects total worth of each cryptocurrency based on user input  
-
+- Utilize AngularJS two-way data binding to immediately display data in total column 
+- Utilize AngularJS filter to create search bar to filter based on user input 
+- Utilize AngularJS $http service to retrieve data from CoinMarketCap API
+- Utilize Bootstrap to create responsive design 
+- Utilize Bootstrap table component for the layout structure 
 ------------------------------------------------------------------------------------------------------------------------------  
 ## Live Preview
 http://cobweb.cs.uga.edu/~truong/tracker/
