@@ -20,7 +20,7 @@ My personal cryptocurrency website that allows me to view the value of my curren
 - Utilize AngularJS two-way data binding to immediately display data in total column 
 - Utilize AngularJS filter to create search bar to filter based on user input 
 - Utilize AngularJS $http service to retrieve data from CoinMarketCap API
-- Utilize Bootstrap to create responsive design 
+- Utilize Bootstrap to design a responsive website
 - Utilize Bootstrap table component for the layout structure 
 ------------------------------------------------------------------------------------------------------------------------------  
 ## Live Preview
