@@ -24,6 +24,5 @@ My personal cryptocurrency website that allows me to view the value of my curren
 - Utilize Bootstrap table component for the layout structure 
 ------------------------------------------------------------------------------------------------------------------------------  
 ## Live Preview
-http://cobweb.cs.uga.edu/~truong/tracker/
-
+https://priceless-northcutt-1d6fc7.netlify.com
   
